@@ -1,0 +1,15 @@
+version: '3.8'
+
+#  ./mvnw spring-boot:build-image
+
+services:
+    db:
+        image: postgres:alpine
+        ports:
+          - "5432:5432"
+        environment:
+          POSTGRES_USERNAME: postgres
+          POSTGRES_PASSWORD: password
+#        volumes:
+#          - ./postgres-data:/var/lib/postgresql/data
+#          - ./sql/schema.sql:/docker-entrypoint-initdb.d/schema.sql
